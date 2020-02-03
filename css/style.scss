@@ -1,0 +1,798 @@
+@font-face{
+	src:url("../fonts/Poppins/Poppins-Light.ttf");
+	font-family: "Poppins";
+}
+
+@font-face{
+	src:url("../fonts/Poppins/Poppins-Bold.ttf");
+	font-family: "Poppins-Bold";
+}
+
+@font-face{
+	src:url("../fonts/Pacifico/Pacifico-Regular.ttf");
+	font-family: "Pacifico";
+}
+
+$white:#ffffff;
+$dark:#3b404a;
+$background:#eceef0;
+$blue:#4d76c6;
+$red:#ff8061;
+$green:#37e372;
+$gray:#c5c9d2;
+$grayicon:#d3d7dd;
+$titlegray:#bac3ce;
+$colortitle:#565963;
+$colortext:#a3a7ae;
+
+*{
+  margin: 0px;
+  padding:0px;
+  box-sizing: border-box;	
+}
+
+html, body
+{
+    height: 100%;
+    font-family: "Poppins";
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
+ font-family: "Poppins";
+}
+//styles for container of all app
+.container{
+	position: relative;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height:100%;
+	background: $background;
+
+	.header{
+		position: fixed;
+		top:0px;
+		left:0px;
+		width: 100%;
+		height:70px;
+		background: $background;
+		z-index: 2000;
+		//border-bottom: 2px solid #dedede;
+		
+		.navigator{
+			position: relative;
+			width:100%;
+			height:100%;
+			display: flex;
+
+			.content{
+				display: flex;
+			}
+
+		}
+
+		.header-left{
+			position: relative;
+			width: 40%;
+			height:100%;
+			
+
+			.container-logo{
+				position: relative;
+				width: 40%;
+				height: 100%;
+				background: $dark;
+				display: flex;
+				justify-content: center;
+				align-items: center;	
+
+				.logo-name{
+					position: relative;
+					top:-5px;
+					right:10px;
+					font-family: 'Pacifico';
+					color:$dark;
+					
+				}
+
+				.icon{
+					position: relative;
+					top:-3px;
+					font-size: 17px;
+					color: $red;
+				}
+			}
+
+			.white{
+				background: $white;
+			}	
+		}
+	}
+
+	.white{
+		background: $white;
+	}
+
+	.navigator{
+		position: relative;
+		
+	}
+
+	.content{
+		position: relative;
+		width: 60%;
+		height: 85%;
+
+	}
+
+	.sub-content{
+		width: 100%;
+		.link_{
+			
+			  .tab{
+				font-size: 14px;
+				
+				.bell{
+					font-size: 13px;
+				}
+			  }
+		}
+	}
+
+	.link_{
+		position: relative;
+		margin-right:10px;
+		margin-bottom: 10px;
+		.tab{
+			position: relative;
+			display: block;
+			padding:10px 15px;
+			color: $dark;
+
+			&:hover{
+				color:$white;
+			}
+
+			.icon{
+				position: relative;
+				top:10px;
+				right:3px;
+				color:$dark;
+			}
+
+			.name-user{
+				position: relative;
+				top:8px;
+				margin-left: 10px;
+				color:$dark;
+			}
+		}
+
+		.tab.tab-mwidth{
+			padding:10px 22px;
+		}
+
+		.row{
+			display: flex;
+			flex-direction: 'row';
+		}
+
+
+		
+	}
+
+	.border-right{
+	  top:5px;
+	  height: 70px;
+	  border-right:1px solid #dedede;
+	}
+
+	.border-left{
+	  border-left:1px solid #dedede;
+	}
+
+}
+
+.row{
+	display: flex;
+	flex-direction: 'row';
+}
+
+.column{
+	display:block;
+	flex-direction: 'column';
+}
+
+.flexend{
+	justify-content: flex-end;
+
+	
+}
+
+.centerY{
+	align-items: center;
+}
+
+.icon{
+	font-size: 30px;
+	color:$grayicon;
+
+}
+
+.bell{
+	font-size:22px;
+}
+
+//styles for avatars
+.container_avatar{
+	position: relative;
+	width: 43px;
+	height: 43px;
+	border:2px solid $gray;
+	border-radius: 50%;
+
+	.avatar{
+		position: absolute;
+		left:0px;
+		top:0px;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+}
+
+.btn{
+	position: relative;
+	padding:15px;
+	background: none;
+	border:none;
+	cursor:pointer;
+
+	.icon_{
+		position: relative;
+		margin-right: 10px;
+		font-size: 20px;
+		top:3px;
+	}
+
+	.text-btn{
+		font-size: 16px;
+	}
+}
+
+.btn-row{
+	display: flex;
+}
+
+.btn-wbackground{
+	.text-btn,.icon_{
+		color:$gray;
+	}
+}
+
+//estilos para el deslizador de imagenes
+.sliding-image-container{
+	position: relative;
+	width: 100%;
+	height:360px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	&:hover{
+	 .btn-move{
+	 	transition: all 1s;
+		visibility: visible;
+	  }
+	}
+	.container-showing{
+		width: 300%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.btn-move{
+		position: absolute;
+		width: 45px;
+		height: 90px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		background: $white;
+		border:1px solid $white;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,.19);
+		z-index: 100;
+		cursor: pointer;
+		overflow: hidden;
+		outline: none;
+		visibility: hidden;
+	}
+
+	.btn-left{
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		left:0px;
+
+
+		.angle,.icon-ctrl{
+			position: relative;
+			left:6px;
+			display: block;
+			transform: rotate(-90deg);
+			font-size: 40px;
+		}
+	}
+
+	.btn-right{
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		right:0px;
+
+		.angle{
+			position: relative;
+			right:6px;
+			display: block;
+			transform: rotate(90deg);
+			font-size: 45px;
+		}
+	}
+
+	.sliding{
+		position: relative;
+		left:0px;
+		width: 300%;
+		height: 100%;
+		display: flex;
+		background: $dark;
+		overflow: hidden;
+
+		.container-image{
+			position: relative;
+			width: 100%;
+			height:100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			
+
+			.image{
+				position: relative;
+				margin: auto;
+				width: 100%;
+				height: 100%;
+				top:0px;
+				display: block;
+
+			}
+		}
+	}
+}
+
+
+//estilos para el contenedor de los filtros de la pagina principal.
+.container-filters{
+	position: relative;
+	width: 100%;
+	height:120px;
+	padding: 6px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.filters{
+		position: relative;
+		width: 350px;
+		border:2px solid $gray;
+		padding: 15px 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 6px;
+
+		.item{
+			.tab{
+				display:block;
+				padding:3px;
+				color:rgba($dark,0.6);
+			}
+
+			.active{
+				color:$dark;
+				font-family: 'Poppins-Bold';
+			}
+		}
+	}
+}
+
+
+//estilos para la caja de los productos
+.box-product{
+	position: relative;
+	width: 260px;
+	height: 320px;
+	display: block;
+	margin-top: 10px;
+	margin-right: 20px;
+
+	.discount{
+		position: relative;
+		display: block;
+		font-family: "Poppins-Bold";
+		color:$white;
+		background: $green;
+		border-radius: 6px;
+		padding: 3px 8px;
+		font-size: 13px;
+		margin-left: 15px;
+
+	}
+
+	.panel-top{
+		position: relative;
+		top:0px;
+		width: 100%;
+		height: 55%;
+
+		.image-product{
+			position: absolute;
+			left:0px;
+			width:100%;
+			height:100%;
+			border-radius: 9%;
+		}
+	}
+	.panel-body{
+		position: relative;
+		width: 100%;
+		height: 45%;
+
+		.name-product{
+			position: relative;
+			margin-top: 5px;
+			color:$dark;
+			font-family: "Poppins-bold";
+			z-index: 100;
+
+			a{
+				font-family: "Poppins-bold";
+				z-index: 100;
+				color:$dark;
+			}
+		}
+		.container-value{
+			display: flex;
+
+			.price{
+				font-family: "Poppins-bold";
+				color:$colortitle;
+			}
+		}
+
+		.description{
+			font-size:15px;
+			color:$colortext;
+		}
+	}
+}
+.container-products{
+	position: relative;
+	width: 95%;
+	padding: 10px;
+	margin:auto;
+	
+	.container-title{
+		margin-top: 10px;
+
+		.title3{
+			font-size: 17px;
+			color:$dark;
+			font-family: 'Poppins-Bold';
+		}
+	}
+
+	.products{
+		position: relative;
+		width: 100%;
+		display: flex;
+		padding: 10px;
+		
+		
+
+
+	}
+}
+
+.pabsolute{
+	position: absolute;
+}
+.prelative{
+	position: relative;
+}
+
+.bttomx15{
+	bottom: 15px;
+}
+//estilos para los controladores del slider
+.container-controlles{
+	width: 100%;
+	padding:15px;
+	margin: auto;
+	z-index: 200;
+	right:42.5%;
+	left:42.5%;
+	.controllers{
+		position: relative;
+		width: 12%;
+		height:35px;
+		background: $white;
+		border-radius: 6px;
+		box-shadow: 0px 2px 6px 3px rgba(0,0,0,0.20);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 25px;
+		padding-right: 25px;
+		.circle{
+			position: relative;
+			width: 13px;
+			height:13px;
+			background: $gray;
+			border:none;
+			border-radius: 50%;
+			cursor: pointer;
+			outline: none;
+		}
+
+		.circle.active{
+			&:before{
+				position: absolute;
+				content:"";
+				left:3px;
+				top:2.5px;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $white;
+			}
+		}
+	}
+}
+.container-body{
+	position: relative;
+	top:70px;
+	width:100%;
+	height:auto;
+	background: $background;
+
+	
+	.panel_left{
+		height:100%;
+	}
+
+	.panel_right{
+
+	}
+
+	.w100{
+		width: 100%;
+	}
+
+	.w20{
+		width: 20%;
+	}
+
+	.w205px{
+		width: 205px;
+		
+	}
+}
+
+.menu{
+	position: relative;
+	width: 101%;
+	height: 100%;
+	background: $dark;
+	
+	.navigator{
+		
+		.content{
+			width: 100%;
+
+			.link_{
+				width: 92%;
+				margin-left: 7px;
+				
+				.tab{
+					display: flex;
+					border-radius: 4px;
+					color:rgba(255,255,255,0.6);
+
+
+					&:hover{
+						color:$white;
+					}
+
+					.icon{
+						font-size: 23px;
+						margin-right: 10px;	
+					}
+
+					.icon.moresize{
+						position: relative;
+						top:-4px;
+						font-size: 30px;
+					}
+					.icon-right{
+						position: absolute;
+						top:10px;
+						right:10px;
+						font-weight: bold;
+						transform: rotate(180deg);
+					}
+				}
+
+				.tab.active{
+					color:$white;
+					background: rgba(0,0,0,0.30);
+					font-weight: bold;
+				}
+
+			
+				.sub-content{
+					width: 100%;
+					transition: all .6s ease-in-out;
+					display: none;
+					.link_{
+						position: relative;
+						width: 90%;
+						left:15px;
+						margin-bottom: 5px;  
+						  .tab{
+						  	padding:5px 5px;
+							font-size: 14px;
+								.icon{
+									position: relative;
+									top:3px;
+									font-size:14px;
+								}
+						  }
+					}
+				}
+				.sub-content.active{
+					transition: all .6s ease-in-out;
+					visibility: visible;
+				}
+
+
+
+			}
+		}
+	}
+}
+//estilos para el contenedor que visualiza la informacion de los productos.
+.info-product{
+	height:510px;
+	.container-info-product{
+		position: relative;
+		width: 928.27px;
+		height:455px;
+		background: $white;
+		margin:auto;
+		margin-top: 20px;
+		border-radius: 20px;
+		box-shadow: 0px 4px 6px 4px rgba(0,0,0,0.10);
+
+		.info-product{
+			position: relative;
+			top:18px;
+			width: 95%;
+			height:92%;
+			margin: auto;
+			border-radius: 20px;
+			display: flex;
+
+			.panel-left{
+				position: relative;
+				width: 60%;
+				height: 100%;
+				display: flex;
+				
+
+				.panel-left{
+					position: relative;
+					width: 15%;
+					height:100%;
+					display: block;
+
+					.panel-top{
+						position: relative;
+						width: 100%;
+						height: 15%;
+					}
+					.panel-bottom{
+						position: relative;
+						width: 100%;
+						height: 85%;
+
+						.list-piece{
+							position: relative;
+							margin-bottom: 15px;
+
+							.piece{
+								position: relative;
+								display: flex;
+								padding:5px;
+								width: 55px;
+								height:52px;
+								justify-content: center;
+								align-items: center;
+
+								&:hover{
+									.img-piece{
+										opacity: 0.8;
+									}
+								}
+
+								.img-piece{
+									position: relative;
+									width: 40px;
+									height:40px;
+									opacity: 0.3;
+								}
+							}
+
+							.active{
+								border-radius: 4px;
+								border:2px solid #000;
+								.img-piece{
+									opacity: 1;
+								}
+							}
+						}
+					}
+
+				}
+
+				.panel-right{
+					position: relative;
+					width: 85%;
+					height:100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.image-product{
+						position: relative;
+						width: 85%;
+						height: 95%;
+					}
+				}
+			}
+
+			.panel-right{
+				position: relative;
+				width: 40%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.description-product{
+				position: relative;
+				width:333px;
+				height: 100%;
+				border-radius: 20px;
+				background: #f3f3f3;
+			}
+		}
+	}
+}
