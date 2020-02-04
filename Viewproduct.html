@@ -69,7 +69,8 @@
  	 					</div>
  	 				</div>
  	 				<div class="panel-right">
- 	 					<img src="img/shoes2.jpg" alt="" class="image-product">
+ 	 					<img src="img/SHOES/shoes-molde1.png" alt="" class="image-product front-image">
+ 	 					<img src="img/shoes2.jpg" alt="" class="image-product back-image">
  	 				</div>
  	 			</div>
 	 	 		<div class="panel-right">
@@ -82,10 +83,10 @@
 	 	 				<div class="information-detail">
 	 	 					<h4 class="title4" style="margin-top: 10px;">COLOR</h4>
 	 	 					<div class="container-colors">
-	 	 						<li class="list-color"><a href="#" class="color gray active"></a></li>
-	 	 						<li class="list-color"><a href="#" class="color red"></a></li>
-	 	 						<li class="list-color"><a href="#" class="color brown"></a></li>
-	 	 						<li class="list-color"><a href="#" class="color dark"></a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-color active" color=""></a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-color red" color="red"></a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-color brown" color="brown"></a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-color dark" color="dark"></a></li>
 	 	 					</div>
 	 	 				</div>
 	 	 				<div class="information-detail">
@@ -209,49 +210,61 @@
  </div>
  <script src="js/jquery.js"></script>
  <script>
- 	let container = document.querySelector('.sliding');
- 	let childs = $('.container-image').length;
- 	let controls = document.querySelector('.controllers');
- 	let contador = 0;
+ 	// let container = document.querySelector('.sliding');
+ 	// let childs = $('.container-image').length;
+ 	// let controls = document.querySelector('.controllers');
+ 	// let contador = 0;
 
- 	const move = (direction) => {
- 		contador = (direction == "right") ? contador+1 : contador-1;
- 		contador = (contador >= childs) ? 0 : contador;
+ 	// const move = (direction) => {
+ 	// 	contador = (direction == "right") ? contador+1 : contador-1;
+ 	// 	contador = (contador >= childs) ? 0 : contador;
 
- 		$('.sliding').animate({
- 			'margin-left': '-'+contador+'00%'
- 		},500);
+ 	// 	$('.sliding').animate({
+ 	// 		'margin-left': '-'+contador+'00%'
+ 	// 	},500);
 
- 		if(contador == 0){
- 			controls.children[childs-1].classList.remove('active');
- 		}else{
- 			controls.children[contador-1].classList.remove('active');
- 		}
- 		controls.children[contador].classList.add('active');
- 	};
+ 	// 	if(contador == 0){
+ 	// 		controls.children[childs-1].classList.remove('active');
+ 	// 	}else{
+ 	// 		controls.children[contador-1].classList.remove('active');
+ 	// 	}
+ 	// 	controls.children[contador].classList.add('active');
+ 	// };
 
- 	document.querySelector('.btn-right').addEventListener('click', event => {
- 		event.preventDefault();
- 		move("right");
- 	});
+ 	// document.querySelector('.btn-right').addEventListener('click', event => {
+ 	// 	event.preventDefault();
+ 	// 	move("right");
+ 	// });
 
- 	document.querySelector('.btn-left').addEventListener('click', event => {
- 		event.preventDefault();
- 		move("left");
- 	});
+ 	// document.querySelector('.btn-left').addEventListener('click', event => {
+ 	// 	event.preventDefault();
+ 	// 	move("left");
+ 	// });
 
- 	var running = setInterval(( ) => {
- 		move("right");
- 	},2500);
+ 	// var running = setInterval(( ) => {
+ 	// 	move("right");
+ 	// },2500);
 
- 	[].forEach.call(document.querySelectorAll('.circle'),(item,index) => {
- 		item.addEventListener('click',() => {
- 			$('.sliding').animate({
- 				'margin-left': '-'+index+'00%'
- 			},500);
- 			$('.circle').removeClass('active');
- 			controls.children[index].classList.add('active');
- 			clearInterval(running);
+ 	// [].forEach.call(document.querySelectorAll('.circle'),(item,index) => {
+ 	// 	item.addEventListener('click',() => {
+ 	// 		$('.sliding').animate({
+ 	// 			'margin-left': '-'+index+'00%'
+ 	// 		},500);
+ 	// 		$('.circle').removeClass('active');
+ 	// 		controls.children[index].classList.add('active');
+ 	// 		clearInterval(running);
+ 	// 	});
+ 	// });
+
+ 	[].forEach.call(document.querySelectorAll('.btn-color'),(item,index) => {
+ 		item.addEventListener('click',(e) => {
+ 			e.preventDefault();
+ 			let NewClass = 'image-product front-image '+item.getAttribute('color');
+ 			//console.log();
+ 			$('.front-image').attr('class', 'image-product front-image');
+ 			$('.btn-color').removeClass('active');
+ 			item.classList.add('active');
+ 			$('.front-image').attr('class', NewClass);
  		});
  	});
  </script>
