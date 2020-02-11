@@ -69,8 +69,8 @@
  	 					</div>
  	 				</div>
  	 				<div class="panel-right">
- 	 					<img src="img/SHOES/shoes-molde1.png" alt="" class="image-product front-image">
- 	 					<img src="img/shoes2.jpg" alt="" class="image-product back-image">
+ 	 					<img src="img/SHOES/shoes2-molde2-v1.png" alt="" class="image-product front-image">
+ 	 					<img src="img/SHOES/shoes2-front.png" alt="" class="image-product back-image">
  	 				</div>
  	 			</div>
 	 	 		<div class="panel-right">
@@ -92,11 +92,11 @@
 	 	 				<div class="information-detail">
 	 	 					<h4 class="title4" style="margin-top: 10px;">TAMANIO</h4>
 	 	 					<div class="container-colors">
-	 	 						<li class="list-color"><a href="#" class="color wbackground active size-active">32</a></li>
-	 	 						<li class="list-color"><a href="#" class="color wbackground">34</a></li>
-	 	 						<li class="list-color"><a href="#" class="color wbackground">36</a></li>
-	 	 						<li class="list-color"><a href="#" class="color wbackground">38</a></li>
-	 	 						<li class="list-color"><a href="#" class="color wbackground">40</a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-size wbackground active size-active">32</a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-size wbackground">34</a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-size wbackground">36</a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-size wbackground">38</a></li>
+	 	 						<li class="list-color"><a href="#" class="color btn-size wbackground">40</a></li>
 	 	 					</div>
 	 	 				</div>
 	 	 				<div class="information-detail no-border">
@@ -124,9 +124,23 @@
 	 	 			<h3 class="title3">GARANTIA DEL PRODUCTO</h3>
 	 	 			<li class="list-information">Dias:  30</li>
 	 	 			<p class="information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores, blanditiis sint saepe asperiores, aut?</p>
+	 	 			<h3 class="title3">FORMAS DE ENTREGAS</h3>
+	 	 			<li class="list-information">Dias:  30</li>
+	 	 			<p class="information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores, blanditiis sint saepe asperiores, aut?</p>
  	 			</div>
  	 		</div>
  	 		<div class="panel-right">
+ 	 			<div class="container-payment-method border-bottom">
+	 	 			<h3 class="title3">INFORMACION DEL VENDEDOR</h3>
+	 	 			<div class="info-payment-method">
+	 	 				<a href="#"><h4 class="title4 first"><i class="icon-user1"></i> Almacenes la romana</h4></a>
+	 	 				<p class="information bottom">Nos dedicamos a la venta de zapatos de plataforma para dama</p>
+	 	 				<h4 class="title4"><i class="icon-location2"></i> Ubicacion</h4>
+	 	 				<p class="information">Carrera 33a #39-34</p>
+	 	 				<p class="information last"> Cali - Valle del Cauca</p>
+	 	 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.713878489362!2d-76.50640618584339!3d3.4197197523848266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6df3efc8b4f%3A0xc38e9120d6f5253c!2sCra.%2033a%20%2339-34%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1581387941131!5m2!1ses!2sco" width="300" height="250" frameborder="0" style="border:0;margin-bottom: 8px;" allowfullscreen=""></iframe>
+	 	 			</div>
+ 	 			</div>
  	 			<div class="container-payment-method">
 	 	 			<h3 class="title3">METODOS DE PAGO</h3>
 	 	 			<div class="info-payment-method">
@@ -209,64 +223,19 @@
  	</div>
  </div>
  <script src="js/jquery.js"></script>
- <script>
- 	// let container = document.querySelector('.sliding');
- 	// let childs = $('.container-image').length;
- 	// let controls = document.querySelector('.controllers');
- 	// let contador = 0;
-
- 	// const move = (direction) => {
- 	// 	contador = (direction == "right") ? contador+1 : contador-1;
- 	// 	contador = (contador >= childs) ? 0 : contador;
-
- 	// 	$('.sliding').animate({
- 	// 		'margin-left': '-'+contador+'00%'
- 	// 	},500);
-
- 	// 	if(contador == 0){
- 	// 		controls.children[childs-1].classList.remove('active');
- 	// 	}else{
- 	// 		controls.children[contador-1].classList.remove('active');
- 	// 	}
- 	// 	controls.children[contador].classList.add('active');
- 	// };
-
- 	// document.querySelector('.btn-right').addEventListener('click', event => {
- 	// 	event.preventDefault();
- 	// 	move("right");
- 	// });
-
- 	// document.querySelector('.btn-left').addEventListener('click', event => {
- 	// 	event.preventDefault();
- 	// 	move("left");
- 	// });
-
- 	// var running = setInterval(( ) => {
- 	// 	move("right");
- 	// },2500);
-
- 	// [].forEach.call(document.querySelectorAll('.circle'),(item,index) => {
- 	// 	item.addEventListener('click',() => {
- 	// 		$('.sliding').animate({
- 	// 			'margin-left': '-'+index+'00%'
- 	// 		},500);
- 	// 		$('.circle').removeClass('active');
- 	// 		controls.children[index].classList.add('active');
- 	// 		clearInterval(running);
+ <script> <
+ 	// [].forEach.call(document.querySelectorAll('.btn-color'),(item,index) => {
+ 	// 	item.addEventListener('click',(e) => {
+ 	// 		e.preventDefault();
+ 	// 		let NewClass = 'image-product front-image '+item.getAttribute('color');
+ 	// 		//console.log();
+ 	// 		$('.front-image').attr('class', 'image-product front-image');
+ 	// 		$('.btn-color').removeClass('active');
+ 	// 		item.classList.add('active');
+ 	// 		$('.front-image').attr('class', NewClass);
  	// 	});
  	// });
-
- 	[].forEach.call(document.querySelectorAll('.btn-color'),(item,index) => {
- 		item.addEventListener('click',(e) => {
- 			e.preventDefault();
- 			let NewClass = 'image-product front-image '+item.getAttribute('color');
- 			//console.log();
- 			$('.front-image').attr('class', 'image-product front-image');
- 			$('.btn-color').removeClass('active');
- 			item.classList.add('active');
- 			$('.front-image').attr('class', NewClass);
- 		});
- 	});
  </script>
+ <script src="js/module_shoes.js"></script>
 </body>
 </html>

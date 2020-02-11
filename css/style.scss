@@ -195,9 +195,14 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 				color:$dark;
 			}
 
+			.container_avatar{
+				position: relative;
+				top: 2px;
+			}
+
 			.name-user{
 				position: relative;
-				top:8px;
+				top:0px;
 				margin-left: 10px;
 				color:$dark;
 			}
@@ -210,6 +215,7 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 		.row{
 			display: flex;
 			flex-direction: 'row';
+			align-items: center;
 		}
 
 
@@ -445,14 +451,18 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 .container-cards{
 	position: relative;
 	display: flex;
-	padding:5px;
+	padding:2px;
 
 	.card{
 		position: relative;
 		margin-right: 10px;
+		height: 45px;
+
 
 		.card_{
 			position: relative;
+			top:-2px;
+			right:8px;
 			width:70px;
 			height: 50px;
 			background: none;
@@ -487,7 +497,7 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 .container-more-information{
 	position: relative;
 	width: 92%;
-	height:auto;
+	height:740px;
 	margin: auto;
 	padding:10px;
 	display: flex;
@@ -499,8 +509,19 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 		.container-description{
 			position: relative;
 			top:0px;
-			margin-top: 0px;
-			height: 360px;
+			margin-top: 15px;
+			height:510px;
+
+			&:after{
+				position: absolute;
+				right:25px;
+				top:0px;
+				content:"";
+				width: 1.3px;
+				height:100%;
+				border-radius: 6px;
+				background: $gray;
+			}
 
 			.title3,.information{
 				width: 92%;
@@ -524,7 +545,33 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 		height: 100%;
 
 		.container-payment-method{
-			height: 360px;
+			margin-top: 15px;
+			height: auto;
+
+			.info-payment-method{
+				
+				.title4.first{
+					margin-top: 8px;
+				}
+
+				.information{
+					font-size:15px;
+					color:$colortext;
+				}
+
+				.information.bottom{
+					margin-bottom: 10px;
+				}
+
+				.information.last{
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.container-payment-method.border-bottom{
+			border-bottom: 1px solid $gray;
+			margin-bottom: 15px;
 		}
 
 	}
@@ -773,7 +820,7 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 					font-weight: bold;
 				}
 
-			
+				
 				.sub-content{
 					width: 100%;
 					transition: all .6s ease-in-out;
@@ -890,11 +937,11 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 	.container-info-product{
 		position: relative;
 		width: 928.27px;
-		height:455px;
+		height:465px;
 		background: $white;
 		margin:auto;
 		margin-top: 0px;
-		padding-top: 20px;
+		padding-top: 7px;
 		border-bottom:2px solid #dedede;
 		//box-shadow: 0px 4px 6px 4px rgba(0,0,0,0.10);
 
@@ -902,13 +949,14 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 			position: relative;
 			top:18px;
 			width: 95%;
-			height:92%;
+			height:88%;
 			margin: auto;
 			border-radius: 20px;
 			display: flex;
 
 			.panel-left{
 				position: relative;
+				top:10px;
 				width: 60%;
 				height: 100%;
 				display: flex;
@@ -916,6 +964,7 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 
 				.panel-left{
 					position: relative;
+					top:0px;
 					width: 15%;
 					height:100%;
 					display: block;
@@ -980,21 +1029,22 @@ a,li,p,button,span,h1,h2,h3,h4,textarea,input,label{
 					.image-product{
 						width: 85%;
 						height: 95%;
+					}
+
+					.front-image{
+						position: absolute;
 						-o-mix-blend-mode: multiply;
 						-ms-mix-blend-mode: multiply;
 						-moz-mix-blend-mode: multiply;
 						mix-blend-mode: multiply;
 						-webkit-mix-blend-mode: multiply;
-					}
-
-					.front-image{
-						position: absolute;
 						z-index: 2;
 					}
 
 					.back-image{
 						position:absolute;
 						left:0px;
+						z-index: 1;
 						
 					}
 				}
